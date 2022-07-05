@@ -6,10 +6,10 @@
 
 ```bash
 ├── App component # Parent of all the webapp and have the router cpmponent
-└── Books Page # Contains the Title, Shelves and Books
-|   └── Shelf Component
-|       └── Book Component
-└── Search Page        
+    └── Books Page # Contains the Title, Shelves and Books
+    |   └── Shelf Component
+    |       └── Book Component
+    └── Search Page        
 ```
 
 ## Available Scripts

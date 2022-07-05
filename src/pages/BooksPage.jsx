@@ -3,8 +3,8 @@ import Shelf from '../components/Shelf'
 import '../css/App.css'
 import {Link} from 'react-router-dom'
 
-const Books = ({books}) => {
-    console.log(books)
+const BooksPage = ({books}) => {
+  console.log(books)
     const currentlyReading = books.filter(book => book.shelf === 'currentlyReading')
     const wantToRead = books.filter(book => book.shelf === 'wantToRead')
     const read = books.filter(book => book.shelf === 'read') 
@@ -12,7 +12,7 @@ const Books = ({books}) => {
   return (
     <div className="list-books">
         <div className="list-books-title">
-        <h1>MyReads</h1>
+        <h1>My Reads</h1>
         </div>
         <div className="list-books-content">
         {shelves.map(shelf => (
@@ -26,4 +26,4 @@ const Books = ({books}) => {
   )
 }
 
-export default Books
+export default BooksPage
