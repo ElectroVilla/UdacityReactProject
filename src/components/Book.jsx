@@ -4,7 +4,6 @@ import {UpdateContext} from '../pages/App'
 // import Select from 'react-select'
 
 const Book = ({book, mode}) => {
-    const [selected, setSelected] = useState(book.shelf)
     const {updateBook, addBook, getBookShelf} = useContext(UpdateContext)
     const handleClick = (e) => {
         e.preventDefault()

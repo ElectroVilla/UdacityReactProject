@@ -2,17 +2,14 @@ import "../css/App.css";
 import React, { useState, useEffect, useContext } from "react";
 import BooksPage from "./BooksPage";
 import Search from "./Search";
-// import {Routes, Route, useNavigate} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
 import * as BooksAPI from "../utils/BooksAPI";
 
 const UpdateContext = React.createContext()
 
 function App() {
-  // let navigate = useNavigate();
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState([]);
-  // const UpdateContext = React.createContext()
   useEffect(() => {
     BooksAPI.getAll().then(setBooks); // Just a different way to do the same function
     // const getAllBooks = async () => {
@@ -54,5 +51,4 @@ function App() {
   );
 }
 
-// export default App;
 export {App, UpdateContext};

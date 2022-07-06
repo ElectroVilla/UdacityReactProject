@@ -1,6 +1,10 @@
 # Udacity React Project: MyReads App
 
- [Create React App](https://github.com/facebook/create-react-app).
+## About the Project
+
+This was a pretty interesting project, I enjoyed it a lot, I had some issues with <select> I did a lot of searches about it and I didn't remove my comments regarding this point.
+
+In the course we studied only two hooks but at the end of that chapter we got a list of many other hooks from react, I decided to implement the "useContext" hook as proof of studying it rather than prop drilling.
 
 ## Pages / Components Structure
 
@@ -11,6 +15,13 @@
     |       └── Book Component
     └── Search Page        
 ```
+## Book Components
+
+The book component was heavily used and reused; it has two props:
+1) book: This is the book object to be processed 
+2) mode: This is a string to identify the calling parent and subsequently helps build the proper options.
+
+The "book" object is carefully processed with an alternative default value of any missing value to ensure faultless behavior.
 
 ## Available Scripts
 
