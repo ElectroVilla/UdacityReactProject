@@ -2,13 +2,13 @@
 
 ## About the Project
 
-This was a pretty interesting project, I enjoyed it a lot, I had some issues with <select> I did a lot of searches about it and I didn't remove my comments regarding this point.
+This was a pretty interesting project, I enjoyed it a lot, I had some issues with [select] I did a lot of searches about it and I didn't remove my comments regarding this point.
 
 In the course we studied only two hooks but at the end of that chapter we got a list of many other hooks from react, I decided to implement the "useContext" hook as proof of studying it rather than prop drilling.
 
 ## Pages / Components Structure
 
-```
+```bash
 ├── App component # Parent of all the webapp and have the router cpmponent
     └── Books Page # Contains the Title, Shelves and Books
     |   └── Shelf Component
@@ -31,6 +31,9 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ### `npm run build`
 
