@@ -1,5 +1,5 @@
 import "../css/App.css";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import BooksPage from "./BooksPage";
 import Search from "./Search";
 import {Routes, Route} from 'react-router-dom';
@@ -11,12 +11,7 @@ function App() {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState([]);
   useEffect(() => {
-    BooksAPI.getAll().then(setBooks); // Just a different way to do the same function
-    // const getAllBooks = async () => {
-    //   const res = await BooksAPI.getAll()
-    //   setBooks(res)
-    // }
-    // getAllBooks();
+    BooksAPI.getAll().then(setBooks);
   }, [])
   const searchForABook = async (query) => {
     const res = await BooksAPI.search(query)

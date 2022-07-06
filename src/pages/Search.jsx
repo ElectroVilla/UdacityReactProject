@@ -8,7 +8,7 @@ const Search = ({searchRes, searchFn}) => {
         setQuery(val)
         searchFn(val)
     }
-    if (query == "") {
+    if (query === "") {
         searchRes = []
     }
   return (
