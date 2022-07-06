@@ -39,10 +39,13 @@ function App() {
     let newBooks = [...books]
     newBooks.push(book)
     setBooks(newBooks)
-    // BooksAPI.update(book, book.shelf)
+    BooksAPI.update(book, book.shelf)
+  }
+  const getBookShelf = (book) => {
+    return books.find(b => b.id === book.id) ? books.find(b => b.id === book.id).shelf : "none"
   }
   return (
-    <UpdateContext.Provider value={ {updateBook, addBook} }>
+    <UpdateContext.Provider value={ {updateBook, addBook, getBookShelf} }>
       <Routes  className="app">
         <Route exact path="/" element={<BooksPage books={books} />} />
         <Route path="/search" element={<Search searchRes={search} searchFn={searchForABook} />} />

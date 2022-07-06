@@ -8,6 +8,9 @@ const Search = ({searchRes, searchFn}) => {
         setQuery(val)
         searchFn(val)
     }
+    if (query == "") {
+        searchRes = []
+    }
   return (
     <div className="search-books">
         <div className="search-books-bar">
@@ -20,8 +23,7 @@ const Search = ({searchRes, searchFn}) => {
         <div className="search-books-results">
         <ol className="books-grid">
             {searchRes.length ? (searchRes.map(book => (
-                // <Book key={book.id} book={book} updateBookShelf={searchFn} />
-                <Book key={book.id} book={book} />
+                <Book key={book.id} book={book} mode="add" />
             ))
             ) : (
                 <li>No results</li>
