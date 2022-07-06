@@ -21,14 +21,9 @@ const Search = ({searchRes, searchFn}) => {
             </div>
         </div>
         <div className="search-books-results">
-        <ol className="books-grid">
-            {searchRes.length ? (searchRes.map(book => (
-                <Book key={book.id} book={book} mode="add" />
-            ))
-            ) : (
-                <li>No results</li>
-                )}
-        </ol>
+            <ol className="books-grid">
+                {searchRes.length ? (searchRes.map(book => ( <Book key={book.id} book={book} mode="add" />))) : ( <li>No results</li> )}
+            </ol>
         </div>
     </div>
   )
