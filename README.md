@@ -8,7 +8,7 @@ In the course we studied only two hooks but at the end of that chapter we got a 
 
 ## Pages / Components Structure
 
-```bash
+```
 ├── App component # Parent of all the webapp and have the router cpmponent
     └── Books Page # Contains the Title, Shelves and Books
     |   └── Shelf Component
